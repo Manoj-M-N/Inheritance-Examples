@@ -22,3 +22,14 @@ Brand Name input,
 Price input,
 Processor selection,
 RAM Size selection .
+
+Hierarchical Inheritance -----
+
+Description:
+This Java project demonstrates Hierarchical Inheritance where a single parent class Vehicle is inherited by multiple child classes: Car, Bike, and Tractor. Each subclass has unique features while sharing common characteristics from the parent class.
+
+Features:
+Parent class: Vehicle,
+Child classes: Car, Bike, Tractor,
+Shared method: display() (common for all vehicles),
+Specific methods: carType(), bikeType(), tractorType().
