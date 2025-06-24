@@ -1,41 +1,35 @@
-// Interface
-interface D {
-    void dType();
+// Interface 1
+interface Father {
+    void fatherType();
 }
 
-// Base Class
-class A {
-    void aType() {
-        System.out.println("Class A");
-    }
+// Interface 2
+interface Mother {
+    void motherType();
 }
 
-// Derived Class from A
-class B extends A {
-    void bType() {
-        System.out.println("Class B inherits from A");
-    }
-}
-
-// Derived Class from B and implements D
-class C extends B implements D {
-    void cType() {
-        System.out.println("Class C inherits from B");
+// Class implementing multiple interfaces
+class Child implements Father, Mother {
+    public void fatherType() {
+        System.out.println("Child's face is similar to his Father.");
     }
 
-    public void dType() {
-        System.out.println("Class C inherits from D");
+    public void motherType() {
+        System.out.println("Child's behaviour is similar to his Mother.");
+    }
+
+    void childType() {
+        System.out.println("Child has properties of both Father and Mother.");
     }
 }
 
 // Main Class
 public class MultipleInheritance {
     public static void main(String[] args) {
-        C obj = new C();
+        Child c = new Child();
 
-        obj.aType(); // Accessing method from class A
-        obj.bType(); // Accessing method from class B
-        obj.cType(); // Accessing method from class C
-        obj.dType(); // Accessing method from interface D
+        c.fatherType();   // Method from Father interface
+        c.motherType();   // Method from Mother interface
+        c.childType();    // Method from Child class
     }
 }
